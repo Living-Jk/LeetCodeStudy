@@ -67,3 +67,17 @@ class Solution:
             # 当当前节点不再是0时，索引递增向后遍历
             if nums[index] != 0:
                 index += 1
+
+
+if __name__ == '__main__':
+    sol = Solution()
+
+    nums1 = [0, 1, 0, 3, 12]
+    sol.moveZeroes(nums1)
+    print(nums1)
+
+    nums2 = [0]
+    sol.moveZeroes(nums2)
+    print(nums2)
+
+

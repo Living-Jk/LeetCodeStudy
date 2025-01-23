@@ -7,6 +7,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
+from common.method import list_to_linked_list
 
 
 class Solution:
@@ -64,3 +65,22 @@ class Solution:
 
             if fast == slow:
                 return True
+
+
+if __name__ == '__main__':
+    lst1 = [3, 2, 0, 4]
+    linked_list1 = list_to_linked_list(lst1)
+    linked_list2 = list_to_linked_list(lst1)
+
+    # 制造环形链表
+    second_node = linked_list1.next
+    end_node = linked_list1.next.next.next
+    end_node.next = second_node
+
+    # 验证结果
+    sol = Solution()
+    print(sol.hasCycle(linked_list1))
+    print(sol.hasCycle(linked_list2))
+    print(sol.hasCycle(None))
+
+

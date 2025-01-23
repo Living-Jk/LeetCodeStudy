@@ -7,7 +7,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
-
+from common.method import list_to_linked_list
 
 class Solution:
     # 哈希集合
@@ -61,3 +61,27 @@ class Solution:
             ptr_A = ptr_A.next if ptr_A else headB
             ptr_B = ptr_B.next if ptr_B else headA
         return ptr_A
+
+
+if __name__ == '__main__':
+    lst1 = [4, 1]
+    lst2 = [5, 6, 1]
+    lst3 = [8, 4, 5]
+
+    linked_list1 = list_to_linked_list(lst1)
+    linked_list2 = list_to_linked_list(lst2)
+    linked_list3 = list_to_linked_list(lst3)
+
+    # 制造相交链表
+    linked_list1.next.next = linked_list3
+    linked_list2.next.next.next = linked_list3
+
+    sol = Solution()
+    print(sol.getIntersectionNode(linked_list1, linked_list2).val)
+
+    # 无相交链表
+    linked_list4 = list_to_linked_list(lst1)
+    linked_list5 = list_to_linked_list(lst2)
+
+    print(sol.getIntersectionNode(linked_list4, linked_list5))
+

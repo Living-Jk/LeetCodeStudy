@@ -7,6 +7,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
+from common.method import linked_list_to_list, list_to_linked_list
 
 
 class Solution:
@@ -38,3 +39,14 @@ class Solution:
             cur.next, prev, cur, = prev, cur, cur.next
 
         return prev
+
+
+if __name__ == '__main__':
+    lst1 = [3, 2, 0, 4, 10, 1, 6]
+    linked_list = list_to_linked_list(lst1)
+
+    sol = Solution()
+    result = sol.reverseList(linked_list)
+
+    print(linked_list_to_list(result))
+

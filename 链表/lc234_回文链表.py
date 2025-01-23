@@ -7,7 +7,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
-
+from common.method import list_to_linked_list
 
 class Solution:
     # 方法一：遍历链表形成数组，双指针遍历
@@ -106,6 +106,18 @@ class Solution:
         return prev
 
 
+if __name__ == '__main__':
+    lst1 = [1, 2, 3, 3, 2, 1]
+    linked_list = list_to_linked_list(lst1)
+
+    sol = Solution()
+    result = sol.isPalindrome(linked_list)
+    print(result)
+
+    lst2 = [1, 2]
+    linked_list2 = list_to_linked_list(lst2)
+    result = sol.isPalindrome2(linked_list2)
+    print(result)
 
 
     # 错误答案，只能跑过部分case
@@ -135,6 +147,8 @@ class Solution:
 
     #     # 结束遍历走到这里，说明是回文链表
     #     return True
+
+
 
 
 

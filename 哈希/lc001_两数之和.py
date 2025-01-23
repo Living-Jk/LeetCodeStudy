@@ -44,6 +44,31 @@ class Solution:
             hash_table[num] = i
 
 
+if __name__ == '__main__':
+    sol = Solution()
+
+    nums1 = [2, 7, 11, 15]
+    target1 = 9
+    result1 = sol.twoSum(nums1, target1)
+    print(result1)
+
+    nums2 = [3, 2, 4]
+    target2 = 6
+    result2 = sol.twoSum(nums2, target2)
+    print(result2)
+
+    nums3 = [3, 3]
+    target3 = 6
+    result3 = sol.twoSum(nums3, target3)
+    print(result3)
+
+
+
+
+
+
+
+
 # 为什么列表直接找不行，因为存在相同值，2-1=1，如果列表有两个1，就会找错【0 1 1 3， 目标值为2】
 # class Solution:
 #     def twoSum(self, nums: List[int], target: int) -> List[int]:

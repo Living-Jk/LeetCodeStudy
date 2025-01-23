@@ -7,6 +7,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
+from common.method import list_to_linked_list
 
 
 class Solution:
@@ -38,3 +39,21 @@ class Solution:
 
         # 循环结束后，慢指针指向的节点即为中间节点
         return slow
+
+
+if __name__ == '__main__':
+    lst1 = [1, 2, 3, 4, 5]
+    linked_list = list_to_linked_list(lst1)
+
+    sol = Solution()
+    result = sol.middleNode(linked_list)
+
+    print(result.val)
+
+    lst2 = [1, 2, 3, 4, 5, 6]
+    linked_list2 = list_to_linked_list(lst2)
+
+    sol = Solution()
+    result = sol.middleNode(linked_list2)
+
+    print(result.val)

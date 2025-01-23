@@ -9,6 +9,7 @@
 
 from typing import Optional
 from type.date_structure import ListNode
+from common.method import linked_list_to_list, list_to_linked_list
 
 
 class Solution:
@@ -54,38 +55,20 @@ class Solution:
         return new_head
 
 
-# 辅助函数：将 Python 列表转换为 ListNode 链表
-def list_to_linked_list(lst):
-    if not lst:  # 如果列表为空，返回 None
-        return None
-    head = ListNode(lst[0])
-    current = head
-    for val in lst[1:]:
-        current.next = ListNode(val)
-        current = current.next
-    return head
+if __name__ == '__main__':
+    list1 = [1, 2, 4]
+    list2 = [1, 3, 5]
+
+    # 转换为链表
+    linked_list1 = list_to_linked_list(list1)
+    linked_list2 = list_to_linked_list(list2)
+
+    # 合并链表
+    solution = Solution()
+    result = solution.mergeTwoLists(linked_list1, linked_list2)
+
+    print(linked_list_to_list(result))  # 输出: [1, 1, 2, 3, 4, 5]
 
 
-# 辅助函数：将 ListNode 链表转换为 Python 列表
-def linked_list_to_list(node):
-    result = []
-    while node:
-        result.append(node.val)
-        node = node.next
-    return result
-
-
-list1 = [1, 2, 4]
-list2 = [1, 3, 5]
-
-# 转换为链表
-linked_list1 = list_to_linked_list(list1)
-linked_list2 = list_to_linked_list(list2)
-
-# 合并链表
-solution = Solution()
-result = solution.mergeTwoLists(linked_list1, linked_list2)
-
-print(linked_list_to_list(result))  # 输出: [1, 1, 2, 3, 4, 5]
 
 
