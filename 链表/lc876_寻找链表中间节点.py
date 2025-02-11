@@ -14,17 +14,17 @@ class Solution:
     # 方法1：遍历链表，形成数组
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         # 创建数组
-        node_list = []
+        new_node_list = []
 
         # 遍历链表，将每个节点存入数组
         cur = head
         while cur != None:
-            node_list.append(cur)
+            new_node_list.append(cur)
             cur = cur.next
 
         # 通过下标直接返回中间节点
-        index = len(node_list) // 2
-        return node_list[index]
+        index = len(new_node_list) // 2
+        return new_node_list[index]
 
     # 方法2：快慢指针
     def middleNode2(self, head: Optional[ListNode]) -> Optional[ListNode]:
