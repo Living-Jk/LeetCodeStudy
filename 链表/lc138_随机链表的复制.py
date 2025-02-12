@@ -117,10 +117,6 @@ class Solution:
         return result
 
 
-
-
-
-
 def test(lst: list):
     sol = Solution()
     random_linked_list = list_to_random_linked_list(lst)
