@@ -6,8 +6,8 @@
 """
 
 from typing import Optional
-from type.date_structure import RandomListNode as Node
-from common.method import random_linked_list_to_list, list_to_random_linked_list
+from lab.type.date_structure import RandomListNode as Node
+from lab.common.method import random_linked_list_to_list, list_to_random_linked_list
 
 
 class Solution:

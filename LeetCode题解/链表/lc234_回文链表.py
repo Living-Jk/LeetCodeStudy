@@ -6,8 +6,8 @@
 """
 
 from typing import Optional
-from type.date_structure import ListNode
-from common.method import list_to_linked_list
+from lab.type.date_structure import ListNode
+from lab.common.method import list_to_linked_list
 
 class Solution:
     # 方法一：遍历链表形成数组，双指针遍历

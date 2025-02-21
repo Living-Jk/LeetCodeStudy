@@ -6,8 +6,8 @@
 """
 
 from typing import Optional
-from type.date_structure import ListNode
-from common.method import linked_list_to_list, list_to_linked_list
+from lab.type.date_structure import ListNode
+from lab.common.method import linked_list_to_list, list_to_linked_list
 
 
 class Solution:

@@ -4,7 +4,7 @@
     @Author  : Yanjiakang
     @File    : method.py
 """
-from type.date_structure import ListNode, RandomListNode
+from lab.type.date_structure import ListNode, RandomListNode
 
 
 # 将列表转换为 ListNode 链表
