@@ -19,6 +19,7 @@ class Solution:
             else:
                 # 不存在则将nums[i]插入集合
                 hash_set.add(nums[i])
+
     def twoSum2(self, nums: List[int], target: int) -> List[int]:
         # 哈希表
         hash_map = dict()
